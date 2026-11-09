@@ -162,7 +162,7 @@ function Install-ADTDeployment
     }
 
     ## <Perform Installation tasks here>
-
+    copy-adtfile -path "$($adtSession.dirfiles)\test.txt" -destination "C:\Users\Public\Desktop"
 
     ##================================================
     ## MARK: Post-Install
@@ -220,7 +220,7 @@ function Uninstall-ADTDeployment
     }
 
     ## <Perform Uninstallation tasks here>
-
+    remove-adtfile -path "C:\Users\Public\Desktop\test.txt"
 
     ##================================================
     ## MARK: Post-Uninstallation
